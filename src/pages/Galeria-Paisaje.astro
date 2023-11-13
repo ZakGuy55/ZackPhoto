@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Galeria, { GaleriaConfig } from "../components/Galeria.astro";
+import GaleriaModal, { GaleriaModalConfig } from "../components/GaleriaModal.astro";
+
+const configGaleriaPrincipal: GaleriaConfig = {
+    
+    id: "Paisajes",
+    columnas: [ 
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen1",
+                alt: "imagen1",
+                src: "/Imagenes/Atardecer.jpg"
+            },
+            {
+                titulo: "imagen4",
+                alt: "imagen4",
+                src: "/Imagenes/Horizonte.jpg"
+            },
+            {
+                titulo: "imagen7",
+                alt: "imagen7",
+                src: "/Imagenes/Cascada.jpg"
+            },
+        ],
+    },
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen2",
+                alt: "imagen2",
+                src: "/Imagenes/Cuadro.jpg"
+            },
+            {
+                titulo: "imagen5",
+                alt: "imagen5",
+                src: "/Imagenes/Ocaso.jpg"
+            },
+            {
+                titulo: "imagen8",
+                alt: "imagen8",
+                src: "/Imagenes/Edificios.jpg"
+            },
+        ],
+    },
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen3",
+                alt: "imagen3",
+                src: "/Imagenes/Flujo.jpg"
+            },
+            {
+                titulo: "imagen6",
+                alt: "imagen6",
+                src: "/Imagenes/Paisaje.jpg"
+            },
+            {
+                titulo: "imagen9",
+                alt: "imagen9",
+                src: "/Imagenes/MarcoAgua.jpg"
+            },
+        ],
+    }
+             ]
+    };
+
+
+
+
+
+
+
+const configGaleriaPrincipalModL: GaleriaModalConfig = {
+    id: configGaleriaPrincipal.id, titulo: "Galeria.-.Principal"
+    };
+
+
+
+
+
+
+
+
+---
+
+
+<Layout title="Paisaje"
+descripcion="galerias fotograficas, web"
+palabras="Galeria, Galery, Photo, Landscape, Paisajem Montañas, Lago">
+    <main>
+        <h3 class="pt-5">PAISAJES</h3>
+
+        <div class="text-center">
+            <img src="/Imagenes/LogoPaisaje.PNG" class="rounded" alt="" width="5%">
+          </div>
+
+
+            <Galeria config={configGaleriaPrincipal} />
+
+            <GaleriaModal config={configGaleriaPrincipalModL}/>
+
+       
+
+</main>
+ </Layout>
+

@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+
+---
+
+<Layout title="Conoceme"
+descripcion= "Seccion sobre mi, conoceme"
+palabras="About, Conoceme" >
+<main>
+
+    <section class="container pt-5">
+        <div class="row">
+            <div class="col">
+                <img src="/Imagenes/YoMero.jpg" alt="Este soy yo" width="100%">
+            </div>
+            <div class= "col">
+                <p class="fs-5">Hola soy Isaac, un fotografo, ilustrador y editor digital que disfruta mucho de tomar fotos de paisajes, animales y personajes que estén contando una historia, usando la edicion digital les doy un mejor enfoque a mis imágenes y con mis conocimientos en video desarrollo interesantes obras visuales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <section class="container">
+        <div class="row">
+            
+                <h7 class= "display-6">HABILIDADES</h7>
+
+                <p3 class="fs-5">
+                    Tengo experiencia usando programas de adobe para la edicion de imágenes y video. Buscando los mejores ángulos para el disfrute del espectador puedo conseguir las fotografías de bellos paisajes, la naturaleza es un regalo y yo puedo retratarla.
+                </p3>
+
+
+                <h5 class= "display-6">SOFTWARES</h5>
+
+                <div class="text-center">
+                    <img src="/Imagenes/Softwares.PNG" class="rounded" alt="" width="50%">
+                  </div>
+
+                  <div class="text-center">
+                    <img src="/Imagenes/LogoMaya.PNG" class="rounded" alt="" width="20%">
+                    <img src="/Imagenes/LogoCinema.PNG" class="rounded" alt="" width="20%">
+                    <img src="/Imagenes/LogoClip.PNG" class="rounded" alt="" width="20%">
+                  </div>
+
+                  <h7 class= "display-6">Servicios</h7>
+
+                  <table class="table table-dark">
+                    <thead>
+                        <th scope="row">1</th>
+                        <td colspan="2" class="table-active">Paisajes</td>
+                        <td>100$ c/u</td>
+                    </thead>
+                    <tbody>
+                      <tr class="table-active">
+                        <th scope="row">2</th>
+                        <td colspan="2" class="table-active">Aimales</td>
+                        <td>100$ c/u</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2" class="table-active">Macro</td>
+                        <td>50$ c/u</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td colspan="2" class="table-active">Personas</td>
+                        <td>50$ c/u</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <h7 class= "display-6">Edicion de fotografias</h7>
+
+
+                  <section class="container p1">
+                    <div class= "row">
+                    <div class="col-lg-4 col-sm-4">
+                    <Tarjeta
+                    fuente= "imagenes/PezEspacial.jpg"
+                    imgDescrip= "Imagen de tarjeta 1"
+                    titulo= "70$"
+                    cuerpo= "lorem ip"
+                    href= "/galeria"
+                    />
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                        <Tarjeta
+                        fuente= "imagenes/ManoGigante.jpg"
+                        imgDescrip= "Imagen de tarjeta 1"
+                        titulo= "70$"
+                        cuerpo= "lorem ip"
+                        href= "/galeria"
+                        />
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                            <Tarjeta
+                            fuente= "imagenes/Catrina.jpg"
+                            imgDescrip= "Imagen de tarjeta 1"
+                            titulo= "70$"
+                            cuerpo= "lorem ip"
+                            href= "/galeria"
+                            />
+                            </div>
+                </div>
+                </section>
+
+
+
+
+            </div>
+       
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <video autoplay loop muted class="w-100 h-auto">
+                    <source src="/Video.mp4" type="video/mp4"
+                     >
+                </video>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    
+</main>
+
+</Layout>
+
+
+<style>
+.container{
+    padding: 5%;
+}
+</style>

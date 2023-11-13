@@ -1,0 +1,106 @@
+---
+import "../Styles/Estilos_principales.scss"
+export interface Props {
+	title: string;
+	palabras: string;
+	descripcion: string;
+}
+
+const { title, palabras, descripcion } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/Iconos/LogoFoto3.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={descripcion} />
+		<meta name="author" content="Isaac">
+		<meta name="keywords" content={palabras} />
+		<meta name="author" content="Isaac" />
+		<title>{title}</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"crossorigin="anonymous"></script>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg position-fixed container-fluid bg-barra"  style="z-index: 100; v"> 
+			<div class="container">
+			  <a class="navbar-brand"  href=""><img src="" alt=""></a> 
+			  <img src="/imagenes/LogoFoto.png" alt="" width="60px">
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<ul class="navbar-nav ">
+				  <li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/">Incio</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="/Conoceme">Conoceme</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Galerias
+					</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="/Galeria-Paisaje">Paisajes</a></li>
+					  <li><a class="dropdown-item" href="/Galeria-Macro">Macro</a></li>
+					  <li><a class="dropdown-item" href="/Galeria-Animales">Animales</a></li>
+					  <li><a class="dropdown-item" href="/Galeria-Personas">Personas</a></li>
+					</ul>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="/Proyecto">Proyecto</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="/Contacto">Contacto</a>
+				  </li>
+				  <li class="nav-item">
+					<!--
+					<a class="nav-link disabled">Disabled</a>
+					-->
+				  </li>
+				</ul>
+				<form class="d-flex" role="search">
+				<!--
+				  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				  <button class="btn btn-outline-success" type="submit">Buscar</button>
+				-->
+				</form>
+			  </div>
+			</div>
+		  </nav>
+
+
+		<slot />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+		<script src="/js/Galeria.js" is:inline></script>
+
+		
+
+		  <footer class="container-fluid">
+			<div class="card text-center bg-footer">
+				<div class="card-body">
+				  <h8 class="card-title"></h8>
+				  <p class="card-text">©2022 Fotografias de Isaac Perez Botello.</p>
+				</div>
+			  </div>
+
+		  </footer>
+
+		  <script is:inline>
+			AOS.init();
+		  </script>
+
+
+	</body>
+
+	
+</html>
+

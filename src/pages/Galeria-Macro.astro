@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Galeria, { GaleriaConfig } from "../components/Galeria.astro";
+import GaleriaModal, { GaleriaModalConfig } from "../components/GaleriaModal.astro";
+
+const configGaleriaPrincipal: GaleriaConfig = {
+    
+    id: "Macro",
+    columnas: [ 
+    {
+        imagenes:[ 
+            {
+                titulo: "",
+                alt: "imagen1",
+                src: "/Imagenes/Gotas.jpg"
+            },
+            {
+                titulo: "imagen3",
+                alt: "imagen3",
+                src: "/Imagenes/Telaraña.jpg"
+            },
+        ],
+    },
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen2",
+                alt: "imagen2",
+                src: "/Imagenes/Florero.jpg"
+            },
+            {
+                titulo: "imagen4",
+                alt: "imagen4",
+                src: "/Imagenes/Riachuelo.jpg"
+            },
+        ],
+    },
+
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen3",
+                alt: "imagen3",
+                src: "/Imagenes/Araña.jpg"
+            },
+            {
+                titulo: "imagen5",
+                alt: "imagen5",
+                src: "/Imagenes/Macro.jpg"
+            },
+        ],
+    },
+             ]
+    };
+
+    
+
+
+
+
+
+
+
+const configGaleriaPrincipalModL: GaleriaModalConfig = {
+    id: configGaleriaPrincipal.id, titulo: "Galeria.-.Principal"
+    };
+
+
+
+
+
+
+
+
+---
+
+
+<Layout title="Macro"
+descripcion="galerias fotograficas, web"
+palabras="Galeria, Galery, Photo, Flor, Agua, Teleraña">
+    <main>
+        <h3 class="pt-5">MACRO</h3>
+
+        <div class="text-center">
+            <img src="/Imagenes/LogoMacro.PNG" class="rounded" alt="" width="5%">
+          </div>
+            <Galeria config={configGaleriaPrincipal} />
+
+            <GaleriaModal config={configGaleriaPrincipalModL}/>
+
+       
+
+</main>
+ </Layout>
+

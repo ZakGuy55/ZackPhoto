@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Galeria, { GaleriaConfig } from "../components/Galeria.astro";
+import GaleriaModal, { GaleriaModalConfig } from "../components/GaleriaModal.astro";
+
+const configGaleriaPrincipal: GaleriaConfig = {
+    
+    id: "Personas",
+    columnas: [ 
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen1",
+                alt: "imagen1",
+                src: "/Imagenes/Abuelita.jpg"
+            },
+            {
+                titulo: "imagen4",
+                alt: "imagen4",
+                src: "/Imagenes/Bici.jpg"
+            },
+            {
+                titulo: "imagen7",
+                alt: "imagen7",
+                src: "/Imagenes/Guerrero.jpg"
+            },
+        ],
+    },
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen2",
+                alt: "imagen2",
+                src: "/Imagenes/MotoCamino.jpg"
+            },
+            {
+                titulo: "imagen5",
+                alt: "imagen5",
+                src: "/Imagenes/Baile.jpg"
+            },
+            {
+                titulo: "imagen8",
+                alt: "imagen8",
+                src: "/Imagenes/Jenga.jpg"
+            },
+        ],
+    },
+    {
+        imagenes:[ 
+            {
+                titulo: "imagen3",
+                alt: "imagen3",
+                src: "/Imagenes/Direccion.jpg"
+            },
+            {
+                titulo: "imagen6",
+                alt: "imagen6",
+                src: "/Imagenes/VistaAgua.jpg"
+            },
+            {
+                titulo: "imagen9",
+                alt: "imagen9",
+                src: "/Imagenes/Basquet.jpg"
+            },
+        ],
+    }
+             ]
+    };
+
+
+
+
+
+
+
+const configGaleriaPrincipalModL: GaleriaModalConfig = {
+    id: configGaleriaPrincipal.id, titulo: "Galeria.-.Principal"
+    };
+
+
+
+
+
+
+
+
+---
+
+
+<Layout title="Programacion en Astro"
+descripcion="galerias fotograficas, web"
+palabras="Galeria, Galery, Photo, Personas, People">
+    <main>
+        <h3 class="pt-5">PERSONAS</h3>
+
+        <div class="text-center">
+            <img src="/Imagenes/LogoPersona.PNG" class="rounded" alt="" width="5%">
+          </div>
+            <Galeria config={configGaleriaPrincipal} />
+
+            <GaleriaModal config={configGaleriaPrincipalModL}/>
+
+       
+
+</main>
+ </Layout>
+
